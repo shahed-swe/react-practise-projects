@@ -1,0 +1,13 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/dynamic-data-loading/node_modules
+/dynamic-data-loading/.pnp
+.pnp.js
+
+# testing
+/dynamic-data-loading/coverage
+
+# production
+/dynamic-data-loading/build
+
