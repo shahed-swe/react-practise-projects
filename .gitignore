@@ -3,11 +3,15 @@
 # dependencies
 /dynamic-data-loading/node_modules
 /dynamic-data-loading/.pnp
+/clickcounter/node_modules
+/clickcounter/.pnp
 .pnp.js
 
 # testing
 /dynamic-data-loading/coverage
+/clickcounter/coverage
 
 # production
 /dynamic-data-loading/build
+/clickcounter/build
 
