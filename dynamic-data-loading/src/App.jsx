@@ -10,8 +10,15 @@ import ShowProduct from './ShowProduct';
 function App() {
 
   const [products, setProducts] = useState(null);
+  const [post, setPost] = useState(null);
 
-  const postid = localStorage.getItem('postid');
+  useEffect(() => {
+        const id = localStorage.getItem('postId');
+        axios.get('https://jsonplaceholder.typicode.com/posts/'+id).then(res => {
+        setPost(res.data);
+    })
+  },[])
+
 
   useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/posts').then(res => {
@@ -34,7 +41,7 @@ function App() {
             <Products products={products}/>
           </Col>
           <Col lg={4}>
-            <ShowProduct post={postid}/>
+            <ShowProduct post={post}/>
           </Col>
         </Row>
           
