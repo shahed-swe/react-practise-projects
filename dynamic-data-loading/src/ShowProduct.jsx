@@ -1,7 +1,10 @@
 import React from 'react';
 
 
-export default function ShowProduct(props){
+function ShowProduct(props){
+    if (props.post == null){
+        return <div>No Post</div>;
+    }
     return(
         <div className="container">
             <h1>Post Detail</h1>
@@ -10,3 +13,6 @@ export default function ShowProduct(props){
         </div>
     )
 }
+
+
+export default ShowProduct;
